@@ -55,9 +55,9 @@ function open_endpoints() {
     })
     add_input('add_endpoint_layout_cell', 1, {
         "this_class": "add_endpoint_url",
-        "placeholder": "http://localhost:9191/api",
+        "placeholder": "http://localhost:8181/api",
         "spellcheck": false,
-        "default_value": "http://localhost:9191/api"
+        "default_value": "http://localhost:8181/api"
     })
     style_input('add_endpoint_url', 1, {
         "width": "300px"
@@ -128,7 +128,7 @@ function save_endpoints() {
         hold_endpoints.push(inner_eps)
         inner_eps = {}
         add_value('add_endpoint_url', 1, {
-            'value': 'http://localhost:9191/api'
+            'value': 'http://localhost:8181/api'
         })
         add_value('endpoint_name', 1, {
             'value': ''
