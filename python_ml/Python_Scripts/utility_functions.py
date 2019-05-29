@@ -5,6 +5,29 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 
+import numpy as np
+import pandas as pd 
+from sklearn.model_selection import train_test_split
+from sklearn import linear_model
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn import metrics
+from sklearn.model_selection import cross_val_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+from mpl_toolkits.mplot3d import Axes3D
+import folium
+from folium.plugins import HeatMap
+
+evaluation = pd.DataFrame({'Model': [],
+                           'Details':[],
+                           'Root Mean Squared Error (RMSE)':[],
+                           'R-squared (training)':[],
+                           'Adjusted R-squared (training)':[],
+                           'R-squared (test)':[],
+                           'Adjusted R-squared (test)':[],
+                           '5-Fold Cross Validation':[]})
+
 def read_data(path):
     res = pd.read_json(path)
     return(res)
